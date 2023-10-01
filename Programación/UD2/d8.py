@@ -4,6 +4,9 @@ import math
 
 base = int(input("Dime la base: "))
 exponente = int(input("Dime el exponente: "))
-potencia = math.pow(base,exponente)
 
+if exponente < 0:
+    print("El exponente debe ser un entero positivo.")
+
+potencia = math.pow(base,exponente)
 print(int(potencia))
