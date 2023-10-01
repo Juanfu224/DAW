@@ -11,20 +11,18 @@ impuesto = 0
 costel_total = 0
 
 if minutos_duracion <= 5:
-        coste_llamada = minutos_duracion * 1.0
+    coste_llamada = minutos_duracion * 1.0
 elif minutos_duracion <= 8:
     coste_llamada = 5 * 1.0 + (minutos_duracion - 5)* 0.8
 elif minutos_duracion <= 10:
     coste_llamada = 5 * 1.0 + 3 * 0.8 + (minutos_duracion 8)* 0.7
 else:
-    coste_llamada = 5 * 1.0 + 3 * 0.8+ 2 * 0.7+ (minutos_duracion 10) * 0.5
-
+    coste_llamada = 5 * 1.0 + 3 * 0.8+ 2 * 0.7+ (minutos_duracion*10) * 0.5
 if dia_semana == "domingo":
     impuesto = coste_llamada * 0.03
 elif turno == "mañana":
     impuesto = coste_llamada * 0.15
 elif turno == "tarde":
-    impuesto coste_llamada 0.10
-
+    impuesto == coste_llamada 0.10
 coste_total = coste_llamada + impuesto
 print("El coste total de la llamada es de", round (coste_total, 2), "Euros.")
